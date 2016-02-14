@@ -1,2 +1,2 @@
-Swagger Generator for InfyOm Laravel API Generator
+Swagger Generator for InfyOm Laravel Generator
 ===================================================
