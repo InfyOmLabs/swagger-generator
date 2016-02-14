@@ -1,0 +1,20 @@
+{
+    "name": "infyomlabs/swagger-generator",
+    "description": "Swagger Generator for InfyOm Laravel Generator",
+    "keywords": [
+        "laravel",
+        "swagger",
+        "templates",
+        "generator"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mitul Golakiya",
+            "email": "me@mitul.me"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    }
+}

@@ -1,0 +1,7 @@
+     *      @SWG\Parameter(
+     *          name="$FIELD_NAME$",
+     *          in="query",
+     *          description="$DESCRIPTION$",
+     *          required=false,
+     *          type="$FIELD_TYPE$"
+     *      )

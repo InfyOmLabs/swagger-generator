@@ -1,0 +1,38 @@
+/**
+     * @param Create$MODEL_NAME$APIRequest $request
+     * @return Response
+     *
+     * @SWG\Post(
+     *      path="/$MODEL_NAME_PLURAL_CAMEL$",
+     *      summary="Store a newly created $MODEL_NAME$ in storage",
+     *      tags={"$MODEL_NAME$"},
+     *      description="Store $MODEL_NAME$",
+     *      produces={"application/json"},
+     *      @SWG\Parameter(
+     *          name="body",
+     *          in="body",
+     *          description="$MODEL_NAME$ that should be stored",
+     *          required=false,
+     *          @SWG\Schema(ref="#/definitions/$MODEL_NAME$")
+     *      ),
+     *      @SWG\Response(
+     *          response=200,
+     *          description="successful operation",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="success",
+     *                  type="boolean"
+     *              ),
+     *              @SWG\Property(
+     *                  property="data",
+     *                  ref="#/definitions/$MODEL_NAME$"
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      )
+     * )
+     */

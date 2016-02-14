@@ -1,0 +1,32 @@
+/**
+     * @param Request $request
+     * @return Response
+     *
+     * @SWG\Get(
+     *      path="/$MODEL_NAME_PLURAL_CAMEL$",
+     *      summary="Get a listing of the $MODEL_NAME_PLURAL$.",
+     *      tags={"$MODEL_NAME$"},
+     *      description="Get all $MODEL_NAME_PLURAL$",
+     *      produces={"application/json"},
+     *      @SWG\Response(
+     *          response=200,
+     *          description="successful operation",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="success",
+     *                  type="boolean"
+     *              ),
+     *              @SWG\Property(
+     *                  property="data",
+     *                  type="array",
+     *                  @SWG\Items(ref="#/definitions/$MODEL_NAME$")
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      )
+     * )
+     */

@@ -1,0 +1,38 @@
+/**
+     * @param int $id
+     * @return Response
+     *
+     * @SWG\Delete(
+     *      path="/$MODEL_NAME_PLURAL_CAMEL$/{id}",
+     *      summary="Remove the specified $MODEL_NAME$ from storage",
+     *      tags={"$MODEL_NAME$"},
+     *      description="Delete $MODEL_NAME$",
+     *      produces={"application/json"},
+     *      @SWG\Parameter(
+     *          name="id",
+     *          description="id of $MODEL_NAME$",
+     *          type="integer",
+     *          required=true,
+     *          in="path"
+     *      ),
+     *      @SWG\Response(
+     *          response=200,
+     *          description="successful operation",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="success",
+     *                  type="boolean"
+     *              ),
+     *              @SWG\Property(
+     *                  property="data",
+     *                  type="string"
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      )
+     * )
+     */
