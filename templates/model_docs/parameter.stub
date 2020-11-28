@@ -1,7 +1,7 @@
-     *      @SWG\Parameter(
+     * @OA\Parameter(     
      *          name="$FIELD_NAME$",
-     *          in="query",
-     *          description="$DESCRIPTION$",
+     *          description="$DESCRIPTION$",     
      *          required=false,
-     *          type="$FIELD_TYPE$"
-     *      )
+     *          in="path",
+     *          @OA\Schema(type="$FIELD_TYPE$")
+     *      ),

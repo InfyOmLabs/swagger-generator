@@ -2,37 +2,37 @@
      * @param Create$MODEL_NAME$APIRequest $request
      * @return Response
      *
-     * @SWG\Post(
+     * @OA\Post(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$",
      *      summary="Store a newly created $MODEL_NAME$ in storage",
      *      tags={"$MODEL_NAME$"},
-     *      description="Store $MODEL_NAME$",
-     *      produces={"application/json"},
-     *      @SWG\Parameter(
-     *          name="body",
-     *          in="body",
+     *      description="Store $MODEL_NAME$",     
+     *      @OA\RequestBody(
      *          description="$MODEL_NAME$ that should be stored",
      *          required=false,
-     *          @SWG\Schema(ref="#/definitions/$MODEL_NAME$")
+     *          @OA\JsonContent(ref="#/components/schemas/$MODEL_NAME$")
      *      ),
-     *      @SWG\Response(
-     *          response=200,
+     *      @OA\Response(
+     *          response=201,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
-     *                  ref="#/definitions/$MODEL_NAME$"
+                        ref="#/components/schemas/$MODEL_NAME$",
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )
      *          )
-     *      )
+     *      ),
+     *      @OA\Response(response=400, description="Bad Request"),
+     *      @OA\Response(response=401, description="Unauthenticated"),
+     *      @OA\Response(response=403, description="Forbidden")
      * )
      */

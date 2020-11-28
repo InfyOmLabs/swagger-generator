@@ -1,7 +1,10 @@
 /**
- * @SWG\Definition(
- *      definition="$MODEL_NAME$",
+ * @OA\Schema(
+ *     title="$MODEL_NAME$",
+ *     description="$MODEL_NAME$ model",
  *      required={$REQUIRED_FIELDS$},
-$PROPERTIES$
+ *     @OA\Xml(
+ *         name="$MODEL_NAME$"
+ *     )
  * )
  */

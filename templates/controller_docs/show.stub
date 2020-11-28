@@ -2,37 +2,40 @@
      * @param int $id
      * @return Response
      *
-     * @SWG\Get(
+     * @OA\Get(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$/{id}",
      *      summary="Display the specified $MODEL_NAME$",
      *      tags={"$MODEL_NAME$"},
-     *      description="Get $MODEL_NAME$",
-     *      produces={"application/json"},
-     *      @SWG\Parameter(
+     *      description="Get $MODEL_NAME$",     
+     *      @OA\Parameter(
      *          name="id",
      *          description="id of $MODEL_NAME$",
-     *          type="integer",
+     *          @OA\Schema(type="integer")
      *          required=true,
      *          in="path"
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
-     *                  ref="#/definitions/$MODEL_NAME$"
+     *          @OA\JsonContent(ref="#/components/schemas/$MODEL_NAME$")
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )
      *          )
-     *      )
+     *      ),
+     *      @OA\Response(response=400, description="Bad Request"),
+     *      @OA\Response(response=401, description="Unauthenticated",),
+     *      @OA\Response(response=403, description="Forbidden"),
+     *      @OA\Response(response=404, description="$MODEL_NAME$ Not Found"),
      * )
      */
