@@ -16,5 +16,11 @@
     ],
     "require": {
         "php": ">=5.5.9"
-    }
+    },
+    "funding": [
+        {
+            "type": "opencollective",
+            "url": "https://opencollective.com/infyomlabs"
+        }
+    ]
 }
