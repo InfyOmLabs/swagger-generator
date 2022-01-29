@@ -7,7 +7,6 @@
      *      summary="Store a newly created $MODEL_NAME$ in storage",
      *      tags={"$MODEL_NAME$"},
      *      description="Store $MODEL_NAME$",
-     *      produces={"application/json"},
      *      @OA\Parameter(
      *          name="body",
      *          in="body",

@@ -7,7 +7,6 @@
      *      summary="Display the specified $MODEL_NAME$",
      *      tags={"$MODEL_NAME$"},
      *      description="Get $MODEL_NAME$",
-     *      produces={"application/json"},
      *      @OA\Parameter(
      *          name="id",
      *          description="id of $MODEL_NAME$",
