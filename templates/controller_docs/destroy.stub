@@ -4,7 +4,7 @@
      *
      * @OA\Delete(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$/{id}",
-     *      summary="Remove the specified $MODEL_NAME$ from storage",
+     *      summary="delete$MODEL_NAME$",
      *      tags={"$MODEL_NAME$"},
      *      description="Delete $MODEL_NAME$",
      *      @OA\Parameter(

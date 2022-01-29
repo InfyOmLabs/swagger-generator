@@ -1,11 +1,11 @@
 /**
      * @param int $id
-     * @param Update$MODEL_NAME$APIRequest $request
+     * @param Request $request
      * @return Response
      *
      * @OA\Put(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$/{id}",
-     *      summary="Update the specified $MODEL_NAME$ in storage",
+     *      summary="update$MODEL_NAME$",
      *      tags={"$MODEL_NAME$"},
      *      description="Update $MODEL_NAME$",
      *      @OA\Parameter(

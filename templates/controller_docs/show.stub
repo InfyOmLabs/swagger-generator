@@ -4,7 +4,7 @@
      *
      * @OA\Get(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$/{id}",
-     *      summary="Display the specified $MODEL_NAME$",
+     *      summary="get$MODEL_NAME$Item",
      *      tags={"$MODEL_NAME$"},
      *      description="Get $MODEL_NAME$",
      *      @OA\Parameter(

@@ -1,18 +1,26 @@
 /**
-     * @param Create$MODEL_NAME$APIRequest $request
+     * @param Request $request
      * @return Response
      *
      * @OA\Post(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$",
-     *      summary="Store a newly created $MODEL_NAME$ in storage",
+     *      summary="store$MODEL_NAME$",
      *      tags={"$MODEL_NAME$"},
      *      description="Store $MODEL_NAME$",
-     *      @OA\Parameter(
-     *          name="body",
-     *          in="body",
-     *          description="$MODEL_NAME$ that should be stored",
-     *          required=false,
-     *          @OA\Schema(ref="#/definitions/$MODEL_NAME$")
+     *      @OA\RequestBody(
+     *        required=true,
+     *        @OA\MediaType(
+     *            mediaType="application/x-www-form-urlencoded",
+     *            @OA\Schema(
+     *                type="object",
+     *                required={""},
+     *                @OA\Property(
+     *                    property="name",
+     *                    description="desc",
+     *                    type="string"
+     *                )
+     *            )
+     *        )
      *      ),
      *      @OA\Response(
      *          response=200,
