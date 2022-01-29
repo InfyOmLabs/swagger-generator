@@ -12,7 +12,9 @@
      *      @SWG\Parameter(
      *          name="id",
      *          description="id of $MODEL_NAME$",
-     *          type="integer",
+     *           @OA\Schema(
+     *             type="integer"
+     *          ),
      *          required=true,
      *          in="path"
      *      ),
