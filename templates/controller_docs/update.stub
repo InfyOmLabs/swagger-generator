@@ -17,12 +17,20 @@
      *          required=true,
      *          in="path"
      *      ),
-     *      @OA\Parameter(
-     *          name="body",
-     *          in="body",
-     *          description="$MODEL_NAME$ that should be updated",
-     *          required=false,
-     *          @OA\Schema(ref="#/definitions/$MODEL_NAME$")
+     *      @OA\RequestBody(
+     *        required=true,
+     *        @OA\MediaType(
+     *            mediaType="application/x-www-form-urlencoded",
+     *            @OA\Schema(
+     *                type="object",
+     *                required={""},
+     *                @OA\Property(
+     *                    property="name",
+     *                    description="desc",
+     *                    type="string"
+     *                )
+     *            )
+     *        )
      *      ),
      *      @OA\Response(
      *          response=200,

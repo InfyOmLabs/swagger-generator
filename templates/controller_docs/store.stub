@@ -4,9 +4,9 @@
      *
      * @OA\Post(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$",
-     *      summary="store$MODEL_NAME$",
+     *      summary="create$MODEL_NAME$",
      *      tags={"$MODEL_NAME$"},
-     *      description="Store $MODEL_NAME$",
+     *      description="Create $MODEL_NAME$",
      *      @OA\RequestBody(
      *        required=true,
      *        @OA\MediaType(
