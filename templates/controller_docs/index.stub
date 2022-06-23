@@ -3,7 +3,7 @@
      * @return Response
      *
      * @OA\Get(
-     *      path="/$MODEL_NAME_PLURAL_CAMEL$",
+     *      path="/$MODEL_NAME_PLURAL_DASHED$",
      *      summary="get$MODEL_NAME$List",
      *      tags={"$MODEL_NAME$"},
      *      description="Get all $MODEL_NAME_PLURAL$",

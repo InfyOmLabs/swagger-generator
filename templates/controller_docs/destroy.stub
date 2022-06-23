@@ -3,7 +3,7 @@
      * @return Response
      *
      * @OA\Delete(
-     *      path="/$MODEL_NAME_PLURAL_CAMEL$/{id}",
+     *      path="/$MODEL_NAME_PLURAL_DASHED$/{id}",
      *      summary="delete$MODEL_NAME$",
      *      tags={"$MODEL_NAME$"},
      *      description="Delete $MODEL_NAME$",

@@ -4,7 +4,7 @@
      * @return Response
      *
      * @OA\Put(
-     *      path="/$MODEL_NAME_PLURAL_CAMEL$/{id}",
+     *      path="/$MODEL_NAME_PLURAL_DASHED$/{id}",
      *      summary="update$MODEL_NAME$",
      *      tags={"$MODEL_NAME$"},
      *      description="Update $MODEL_NAME$",
