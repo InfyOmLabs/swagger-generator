@@ -1,42 +1,51 @@
 /**
      * @param int $id
-     * @param Update$MODEL_NAME$APIRequest $request
+     * @param Request $request
      * @return Response
      *
-     * @SWG\Put(
+     * @OA\Put(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$/{id}",
-     *      summary="Update the specified $MODEL_NAME$ in storage",
+     *      summary="update$MODEL_NAME$",
      *      tags={"$MODEL_NAME$"},
      *      description="Update $MODEL_NAME$",
-     *      produces={"application/json"},
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="id",
      *          description="id of $MODEL_NAME$",
-     *          type="integer",
+     *           @OA\Schema(
+     *             type="integer"
+     *          ),
      *          required=true,
      *          in="path"
      *      ),
-     *      @SWG\Parameter(
-     *          name="body",
-     *          in="body",
-     *          description="$MODEL_NAME$ that should be updated",
-     *          required=false,
-     *          @SWG\Schema(ref="#/definitions/$MODEL_NAME$")
+     *      @OA\RequestBody(
+     *        required=true,
+     *        @OA\MediaType(
+     *            mediaType="application/x-www-form-urlencoded",
+     *            @OA\Schema(
+     *                type="object",
+     *                required={""},
+     *                @OA\Property(
+     *                    property="name",
+     *                    description="desc",
+     *                    type="string"
+     *                )
+     *            )
+     *        )
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  ref="#/definitions/$MODEL_NAME$"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )

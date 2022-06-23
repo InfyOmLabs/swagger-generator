@@ -2,27 +2,26 @@
      * @param Request $request
      * @return Response
      *
-     * @SWG\Get(
+     * @OA\Get(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$",
-     *      summary="Get a listing of the $MODEL_NAME_PLURAL$.",
+     *      summary="get$MODEL_NAME$List",
      *      tags={"$MODEL_NAME$"},
      *      description="Get all $MODEL_NAME_PLURAL$",
-     *      produces={"application/json"},
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  type="array",
-     *                  @SWG\Items(ref="#/definitions/$MODEL_NAME$")
+     *                  @OA\Items(ref="#/definitions/$MODEL_NAME$")
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )

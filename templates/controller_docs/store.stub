@@ -1,34 +1,41 @@
 /**
-     * @param Create$MODEL_NAME$APIRequest $request
+     * @param Request $request
      * @return Response
      *
-     * @SWG\Post(
+     * @OA\Post(
      *      path="/$MODEL_NAME_PLURAL_CAMEL$",
-     *      summary="Store a newly created $MODEL_NAME$ in storage",
+     *      summary="create$MODEL_NAME$",
      *      tags={"$MODEL_NAME$"},
-     *      description="Store $MODEL_NAME$",
-     *      produces={"application/json"},
-     *      @SWG\Parameter(
-     *          name="body",
-     *          in="body",
-     *          description="$MODEL_NAME$ that should be stored",
-     *          required=false,
-     *          @SWG\Schema(ref="#/definitions/$MODEL_NAME$")
+     *      description="Create $MODEL_NAME$",
+     *      @OA\RequestBody(
+     *        required=true,
+     *        @OA\MediaType(
+     *            mediaType="application/x-www-form-urlencoded",
+     *            @OA\Schema(
+     *                type="object",
+     *                required={""},
+     *                @OA\Property(
+     *                    property="name",
+     *                    description="desc",
+     *                    type="string"
+     *                )
+     *            )
+     *        )
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  ref="#/definitions/$MODEL_NAME$"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )
