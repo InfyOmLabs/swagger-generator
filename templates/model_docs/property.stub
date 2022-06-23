@@ -1,5 +1,7 @@
  *      @OA\Property(
  *          property="$FIELD_NAME$",
  *          description="$DESCRIPTION$",
+ *          readOnly=$FIELD_READ_ONLY$,
+ *          nullable=$FIELD_NULLABLE$,
  *          type="$FIELD_TYPE$"$FIELD_FORMAT$
  *      )
