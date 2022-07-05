@@ -1,15 +1,12 @@
 /**
-     * @param int $id
-     * @return Response
-     *
      * @OA\Delete(
-     *      path="/$MODEL_NAME_PLURAL_DASHED$/{id}",
-     *      summary="delete$MODEL_NAME$",
-     *      tags={"$MODEL_NAME$"},
-     *      description="Delete $MODEL_NAME$",
+     *      path="/{{ $config->modelNames->dashedPlural }}/{id}",
+     *      summary="delete{{ $config->modelNames->name }}",
+     *      tags={"{{ $config->modelNames->name }}"},
+     *      description="Delete {{ $config->modelNames->name }}",
      *      @OA\Parameter(
      *          name="id",
-     *          description="id of $MODEL_NAME$",
+     *          description="id of {{ $config->modelNames->name }}",
      *           @OA\Schema(
      *             type="integer"
      *          ),

@@ -1,12 +1,9 @@
 /**
-     * @param Request $request
-     * @return Response
-     *
      * @OA\Post(
-     *      path="/$MODEL_NAME_PLURAL_DASHED$",
-     *      summary="create$MODEL_NAME$",
-     *      tags={"$MODEL_NAME$"},
-     *      description="Create $MODEL_NAME$",
+     *      path="/{{ $config->modelNames->dashedPlural }}",
+     *      summary="create{{ $config->modelNames->name }}",
+     *      tags={"{{ $config->modelNames->name }}"},
+     *      description="Create {{ $config->modelNames->name }}",
      *      @OA\RequestBody(
      *        required=true,
      *        @OA\MediaType(
@@ -33,7 +30,7 @@
      *              ),
      *              @OA\Property(
      *                  property="data",
-     *                  ref="#/definitions/$MODEL_NAME$"
+     *                  ref="#/definitions/{{ $config->modelNames->name }}"
      *              ),
      *              @OA\Property(
      *                  property="message",

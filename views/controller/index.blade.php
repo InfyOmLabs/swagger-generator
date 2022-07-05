@@ -1,21 +1,9 @@
 /**
-     * @param int $id
-     * @return Response
-     *
      * @OA\Get(
-     *      path="/$MODEL_NAME_PLURAL_DASHED$/{id}",
-     *      summary="get$MODEL_NAME$Item",
-     *      tags={"$MODEL_NAME$"},
-     *      description="Get $MODEL_NAME$",
-     *      @OA\Parameter(
-     *          name="id",
-     *          description="id of $MODEL_NAME$",
-     *           @OA\Schema(
-     *             type="integer"
-     *          ),
-     *          required=true,
-     *          in="path"
-     *      ),
+     *      path="/{{ $config->modelNames->dashedPlural }}",
+     *      summary="get{{ $config->modelNames->name }}List",
+     *      tags={"{{ $config->modelNames->name }}"},
+     *      description="Get all {{ $config->modelNames->plural }}",
      *      @OA\Response(
      *          response=200,
      *          description="successful operation",
@@ -27,7 +15,8 @@
      *              ),
      *              @OA\Property(
      *                  property="data",
-     *                  ref="#/definitions/$MODEL_NAME$"
+     *                  type="array",
+     *                  @OA\Items(ref="#/definitions/{{ $config->modelNames->name }}")
      *              ),
      *              @OA\Property(
      *                  property="message",
