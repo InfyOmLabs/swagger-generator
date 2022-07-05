@@ -1,7 +1,0 @@
-/**
- * @OA\Schema(
- *      schema="$MODEL_NAME$",
- *      required={$REQUIRED_FIELDS$},
-$PROPERTIES$
- * )
- */
