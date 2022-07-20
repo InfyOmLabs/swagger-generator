@@ -7,7 +7,7 @@
      *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @OA\Schema(
+     *          @OA\JsonContent(
      *              type="object",
      *              @OA\Property(
      *                  property="success",
@@ -16,7 +16,7 @@
      *              @OA\Property(
      *                  property="data",
      *                  type="array",
-     *                  @OA\Items(ref="#/definitions/{{ $config->modelNames->name }}")
+     *                  @OA\Items(ref="#/components/schemas/{{ $config->modelNames->name }}")
      *              ),
      *              @OA\Property(
      *                  property="message",

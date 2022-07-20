@@ -16,7 +16,7 @@
      *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @OA\Schema(
+     *          @OA\JsonContent(
      *              type="object",
      *              @OA\Property(
      *                  property="success",

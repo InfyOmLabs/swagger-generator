@@ -6,23 +6,12 @@
      *      description="Create {{ $config->modelNames->name }}",
      *      @OA\RequestBody(
      *        required=true,
-     *        @OA\MediaType(
-     *            mediaType="application/x-www-form-urlencoded",
-     *            @OA\Schema(
-     *                type="object",
-     *                required={""},
-     *                @OA\Property(
-     *                    property="name",
-     *                    description="desc",
-     *                    type="string"
-     *                )
-     *            )
-     *        )
+     *        @OA\JsonContent(ref="#/components/schemas/{{ $config->modelNames->name }}")
      *      ),
      *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @OA\Schema(
+     *          @OA\JsonContent(
      *              type="object",
      *              @OA\Property(
      *                  property="success",
@@ -30,7 +19,7 @@
      *              ),
      *              @OA\Property(
      *                  property="data",
-     *                  ref="#/definitions/{{ $config->modelNames->name }}"
+     *                  ref="#/components/schemas/{{ $config->modelNames->name }}"
      *              ),
      *              @OA\Property(
      *                  property="message",
