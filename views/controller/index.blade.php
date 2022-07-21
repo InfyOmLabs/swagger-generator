@@ -1,16 +1,13 @@
 /**
-     * @param Request $request
-     * @return Response
-     *
      * @OA\Get(
-     *      path="/$MODEL_NAME_PLURAL_DASHED$",
-     *      summary="get$MODEL_NAME$List",
-     *      tags={"$MODEL_NAME$"},
-     *      description="Get all $MODEL_NAME_PLURAL$",
+     *      path="/{{ $config->modelNames->dashedPlural }}",
+     *      summary="get{{ $config->modelNames->name }}List",
+     *      tags={"{{ $config->modelNames->name }}"},
+     *      description="Get all {{ $config->modelNames->plural }}",
      *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @OA\Schema(
+     *          @OA\JsonContent(
      *              type="object",
      *              @OA\Property(
      *                  property="success",
@@ -19,7 +16,7 @@
      *              @OA\Property(
      *                  property="data",
      *                  type="array",
-     *                  @OA\Items(ref="#/definitions/$MODEL_NAME$")
+     *                  @OA\Items(ref="#/components/schemas/{{ $config->modelNames->name }}")
      *              ),
      *              @OA\Property(
      *                  property="message",

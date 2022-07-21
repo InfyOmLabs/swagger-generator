@@ -1,16 +1,12 @@
 /**
-     * @param int $id
-     * @param Request $request
-     * @return Response
-     *
      * @OA\Put(
-     *      path="/$MODEL_NAME_PLURAL_DASHED$/{id}",
-     *      summary="update$MODEL_NAME$",
-     *      tags={"$MODEL_NAME$"},
-     *      description="Update $MODEL_NAME$",
+     *      path="/{{ $config->modelNames->dashedPlural }}/{id}",
+     *      summary="update{{ $config->modelNames->name }}",
+     *      tags={"{{ $config->modelNames->name }}"},
+     *      description="Update {{ $config->modelNames->name }}",
      *      @OA\Parameter(
      *          name="id",
-     *          description="id of $MODEL_NAME$",
+     *          description="id of {{ $config->modelNames->name }}",
      *           @OA\Schema(
      *             type="integer"
      *          ),
@@ -19,23 +15,12 @@
      *      ),
      *      @OA\RequestBody(
      *        required=true,
-     *        @OA\MediaType(
-     *            mediaType="application/x-www-form-urlencoded",
-     *            @OA\Schema(
-     *                type="object",
-     *                required={""},
-     *                @OA\Property(
-     *                    property="name",
-     *                    description="desc",
-     *                    type="string"
-     *                )
-     *            )
-     *        )
+     *        @OA\JsonContent(ref="#/components/schemas/{{ $config->modelNames->name }}")
      *      ),
      *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @OA\Schema(
+     *          @OA\JsonContent(
      *              type="object",
      *              @OA\Property(
      *                  property="success",
@@ -43,7 +28,7 @@
      *              ),
      *              @OA\Property(
      *                  property="data",
-     *                  ref="#/definitions/$MODEL_NAME$"
+     *                  ref="#/components/schemas/{{ $config->modelNames->name }}"
      *              ),
      *              @OA\Property(
      *                  property="message",
