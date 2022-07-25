@@ -14,6 +14,9 @@ class SwaggerGeneratorServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__.'/../views', 'swagger-generator');
+        $this->publishes([
+            __DIR__.'/../views' => resource_path('vendor/swagger-generator'),
+        ], 'swagger-generator-templates');
     }
 
     /**
